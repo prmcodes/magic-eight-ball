@@ -6,11 +6,11 @@ question = input("Ask the Magic 8-Ball a question:\n")
 time.sleep(2)
 # display one random 'in progess' message of several while ball is 'thinking'
 pondering_dict = { '.\n. .\n. . .\nReading the runes\n. . .\n. .\n.': 'ponder_message_1' ,
-                   'Hmm...\n An interesting quesiton...': 'ponder_message_2',
+                   'Hmm...\nAn interesting quesiton...': 'ponder_message_2',
                    'Well now... Let me think...': 'ponder_message_3',
                    'Patience. I must consult the spirits...': 'ponder_message_4'
                    }
-print(random.choice(list(pondering_dict)) + '\n')
+ponder_response = print('\n' + random.choice(list(pondering_dict)) + '\n')
 time.sleep(3)
 # randomly select one of 20 responses
 answer_dict = { 'It is certain.': 'answer_message_1',
@@ -34,6 +34,8 @@ answer_dict = { 'It is certain.': 'answer_message_1',
                 'Outlook not so good.': 'answer_message_19',
                 'Very doubtful.': 'answer_message_20'
 }
-print(random.choice(list(answer_dict)) + '\n')
+received_response = print("I've divined the answer to your question:")
+time.sleep(1)
+answer_response = print(random.choice(list(answer_dict)) + '\n')
 
 # allow user to ask another question, or, quit
