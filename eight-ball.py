@@ -30,7 +30,7 @@ answer_dict = { 'It is certain.': 'answer_message_1',
 }
 
 def query_question():
-  question = input("Ask the Magic 8-Ball a question:\n")
+  question = input("\nAsk the Magic 8-Ball a question:\n")
   time.sleep(2)
   return
 
@@ -45,10 +45,10 @@ def answer_response():
   answer_response = print(random.choice(list(answer_dict)) + '\n')
   return
 
-query_question()
-ponder_response()
-answer_response()
+another_question = 'yes'
 
-
-
-# allow user to ask another question, or, quit
+while another_question == 'yes':
+    query_question()
+    ponder_response()
+    answer_response()
+    another_question = input("Would you like to ask another question? If so, type yes.\n")
